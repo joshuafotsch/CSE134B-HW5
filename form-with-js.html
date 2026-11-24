@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="media/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+  <script src="form.js" defer></script>
+  <title>Form</title>
+</head>
+
+<body>
+  <header>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="media/logo-dark.png">
+      <img src="media/logo.png" alt="Site logo" width="50">
+    </picture>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="resume.html">Resume</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="about.html">About Me</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Me</a>
+        </li>
+        <li>
+          <a href="experiments.html">Experiments</a>
+        </li>
+        <li>
+          <a href="form-no-js.html">Form - JS</a>
+        </li>
+        <li>
+          <a href="form-with-js.html" aria-current="page">Form + JS</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Form</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+
+      <fieldset>
+        <legend>Rate the Form!</legend>
+        <p id="form-instructions">
+          Fields marked with * are <strong>required</strong>. <br>
+          Comments: 5 - 1,000 characters (a short message is fine).
+        </p>
+
+        <div id="name-info">
+          <label for="name">Name*</label>
+          <p class="char-limit" id="name-count" hidden></p>
+        </div>
+        <input type="text" name="name" id="name" autocomplete="name" required minlength="1" maxlength="100"
+          aria-describedby="form-instructions name-count name-error">
+        <p id="name-error" class="error" aria-live="polite"></p>
+
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" autocomplete="email" required
+          aria-describedby="form-instructions email-error">
+        <p id="email-error" class="error" aria-live="polite"></p>
+
+        <div id="comments-info">
+          <label for="comments">Additional Comments*</label>
+          <p class="char-limit" id="comments-count" hidden></p>
+        </div>
+        <textarea name="comments" id="comments" required minlength="5" maxlength="1000"
+          aria-describedby="form-instructions comments-count comments-error"></textarea>
+        <p id="comments-error" class="error" aria-live="polite"></p>
+
+        <input type="hidden" name="possible_bot" value="true">
+        <input type="hidden" name="form-errors">
+
+        <button id="form-submit" type="submit">Submit</button>
+      </fieldset>
+
+    </form>
+  </main>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/joshua-fotsch222/">Linked In</a>
+      </li>
+      <li>
+        <a href="https://github.com/joshuafotsch">Github</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>

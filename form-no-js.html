@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="media/logo.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Form</title>
+</head>
+
+<body>
+  <header>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="media/logo-dark.png">
+      <img src="media/logo.png" alt="Site logo" width="50">
+    </picture>
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="resume.html">Resume</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="about.html">About Me</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact Me</a>
+        </li>
+        <li>
+          <a href="experiments.html">Experiments</a>
+        </li>
+        <li>
+          <a href="form-no-js.html" aria-current="page">Form - JS</a>
+        </li>
+        <li>
+          <a href="form-with-js.html">Form + JS</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Form</h1>
+
+    <form action="https://httpbin.org/post" method="post">
+
+      <fieldset>
+        <legend>Rate the Form!</legend>
+        <p id="form-instructions">
+          Fields marked with * are <strong>required</strong>. <br>
+          Comments: 5 - 1,000 characters (a short message is fine).
+        </p>
+
+        <label for="name">Name*</label>
+        <input type="text" name="name" id="name" autocomplete="name" required minlength="1" maxlength="100">
+
+        <label for="email">Email*</label>
+        <input type="email" name="email" id="email" autocomplete="email" required>
+
+        <label for="comments">Additional Comments*</label>
+        <textarea name="comments" id="comments" required minlength="5" maxlength="1000"></textarea>
+
+        <input type="hidden" name="possible_bot" value="true">
+
+        <button type="submit">Submit</button>
+      </fieldset>
+
+
+    </form>
+  </main>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/joshua-fotsch222/">Linked In</a>
+      </li>
+      <li>
+        <a href="https://github.com/joshuafotsch">Github</a>
+      </li>
+    </ul>
+  </footer>
+</body>
+
+</html>
