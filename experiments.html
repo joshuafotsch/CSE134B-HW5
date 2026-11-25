@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" href="media/logo.png">
   <link rel="stylesheet" href="style.css">
   <script src="theme.js"></script>
+  <script src="joke-box.js" defer></script>
   <title>Experiments</title>
 </head>
 
@@ -49,6 +50,13 @@
 
     <h1>Experiments</h1>
     <p>A tour of some niche HTML elements.</p>
+
+    <section id="joke-demo" class="card">
+      <h2>API Practice</h2>
+      <noscript>This feature needs javascript to function!</noscript>
+      <joke-box detailed></joke-box>
+      <button hidden id="joke-details" type="button"> Toggle Joke Details</button>
+    </section>
 
 
     <section id="template-demo" class="card">

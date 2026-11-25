@@ -226,8 +226,8 @@ button {
     padding: 0.5em 1.5em;
     font: inherit;
     font-weight: bold;
-    color: var(--color-on-accent);
-    background-color: var(--color-accent);
+    color: var(--color-accent);
+    background-color: var(--color-on-accent);
     border: var(--border);
     border-radius: 999px;
     cursor: pointer;
@@ -235,6 +235,7 @@ button {
 
 button:hover {
     background-color: var(--color-hover);
+    color: var(--color-background);
 }
 
 button:focus-visible {
@@ -483,4 +484,24 @@ textarea:user-invalid {
 
 .char-limit.low {
     color: var(--color-error);
+}
+
+joke-box {
+    /* custom properties */
+    --joke-background: var(--color-nav);
+    --joke-text: var(--color-text);
+
+    display: block;
+    padding: var(--space);
+    background-color: var(--joke-background, white);
+    color: var(--joke-text, black);
+}
+
+joke-box h3 {
+    margin-top: 0;
+}
+
+#joke-details[aria-pressed=true] {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
 }
