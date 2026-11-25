@@ -500,3 +500,8 @@ joke-box {
 joke-box h3 {
     margin-top: 0;
 }
+
+#joke-details[aria-pressed=true] {
+    background-color: var(--color-accent);
+    color: var(--color-on-accent);
+}
